@@ -112,7 +112,7 @@ puVar2 = node1;
 Double-click on it so that it brings you to where the node is defined on the stack.
 You can now see multiple things, the node address (left), the next node address (grey'd on the right with the arrow : ? -> 00105230) and the node elements (a2 02 00 00 01...).
 ![ghidra_output_phase_6](./ghidra_output_6.png)
-From now, we need to retrieve the first 2 bytes on the node's byte array. **==Be careful there, the bytes need to be reversed whilst reading. It is little endian that is used.==**
+From now, we need to retrieve the first 2 bytes on the node's byte array. **Be careful there, the bytes need to be reversed whilst reading. It is little endian that is used.**
 We obtain the following informations :
 ```txt
 address  => node  => int value (hex)         => index
@@ -236,7 +236,7 @@ if (1000 < (int)uVar2 - 1U) {
 ```
 
 The recursive function "fun7" is now ran with the long number, alongside with doing some bitwise operations and passing what interests us, n1. 
-==I could have studied it to understand what it does, but at that point, I already spent hours on the phase 6 and just decided to flag the secret phase. So, if you want a better understanding of the secret phase, please look at other ressources, as my method will only brute-force the anser without triggering the bomb.==
+**I could have studied it to understand what it does, but at that point, I already spent hours on the phase 6 and just decided to flag the secret phase. So, if you want a better understanding of the secret phase, please look at other ressources, as my method will only brute-force the anser without triggering the bomb.**
 ```c
 iVar1 = fun7(n1,uVar2 & 0xffffffff);
 ```
@@ -280,7 +280,7 @@ n45  => 0x0028 (40)
 ```
 
 Now, hop on [Binary Search Tree](http://btv.melezinek.cz/binary-search-tree.html), enter all the decimal values you collected inside the tree and you will start visualizing it.
-==Note that I didn't collect all the nodes, the answer is already in there for me. There is no way for you to know that information, but as I wrote this write-up the next day I completed the bomb lab, I already knew what the answer was.==
+**Note that I didn't collect all the nodes, the answer is already in there for me. There is no way for you to know that information, but as I wrote this write-up the next day I completed the bomb lab, I already knew what the answer was.**
 ![binary_tree_visualisation](./binary_tree_visualization.png)
 
 Now, get on gdb. Put a breakpoint on explode_bomb using the tip I gave you above and prepare to brute-force the lab ;-).

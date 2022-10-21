@@ -111,7 +111,7 @@ puVar2 = node1;
 
 Double-click on it so that it brings you to where the node is defined on the stack.
 You can now see multiple things, the node address (left), the next node address (grey'd on the right with the arrow : ? -> 00105230) and the node elements (a2 02 00 00 01...).
-![[ghidra_output_6.png]]
+![ghidra_output_phase_6](./ghidra_output_6.png)
 From now, we need to retrieve the first 2 bytes on the node's byte array. **==Be careful there, the bytes need to be reversed whilst reading. It is little endian that is used.==**
 We obtain the following informations :
 ```txt
@@ -249,7 +249,7 @@ if (iVar1 != 2) {
 ```
 
 But what is n1 ? Still in Ghidra, let's have a look at it by double-clicking.
-![[ghidra_output_secret.png]]
+![ghidra_output_secret](./ghidra_output_secret.png)
 
 We can see that the n1 variables points to two addresses. As stated above, this looks like a tree, where the struct in C can be defined like this :
 ```c
@@ -281,7 +281,7 @@ n45  => 0x0028 (40)
 
 Now, hop on [Binary Search Tree](http://btv.melezinek.cz/binary-search-tree.html), enter all the decimal values you collected inside the tree and you will start visualizing it.
 ==Note that I didn't collect all the nodes, the answer is already in there for me. There is no way for you to know that information, but as I wrote this write-up the next day I completed the bomb lab, I already knew what the answer was.==
-![[binary_tree_visualization.png]]
+![binary_tree_visualisation](./binary_tree_visualization.png)
 
 Now, get on gdb. Put a breakpoint on explode_bomb using the tip I gave you above and prepare to brute-force the lab ;-).
 When asked for the input of the secret phase, try all the numbers you see on your binary tree and you will find the answer.

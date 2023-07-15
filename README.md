@@ -289,6 +289,4 @@ Mine was 22.
 
 # Conclusion
 
-I hope that you learnt something and that I helped you during those phase. Please feel free to contact me at val.unsure@pm.me if you see an error in the write-up.
-
-Have a nice day !
+I hope that you learnt something and that I helped you during those phase. Have a nice day !

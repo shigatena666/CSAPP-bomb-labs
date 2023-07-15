@@ -1,7 +1,7 @@
 # Introduction
 
-I was surprised by the bomb labs our teacher gave us to do. The aim was to get a better understanding of the assembler and reverse-engineering and I must say it worked.
-For those challenges I used [Ghidra](https://github.com/NationalSecurityAgency/ghidra) together with [OnlineGDB](https://www.onlinegdb.com/online_c_compiler) until phase 6 where I started using [gdb](https://www.sourceware.org/gdb/).
+Our teacher gave us the bomb labs to do. The aim was to get a better understanding of the assembler and reverse-engineering.
+For those challenges I used [Ghidra](https://github.com/NationalSecurityAgency/ghidra) altogether with [OnlineGDB](https://www.onlinegdb.com/online_c_compiler) until phase 6 where I started using [gdb](https://www.sourceware.org/gdb/).
 The first 5 challenges were relatively easy so I didn't take notes for those. However, phase 6 and the secret phase were quite interesting, so I took some notes.
 
 # Phase 6
